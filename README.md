@@ -138,6 +138,40 @@ Text generation in informal code-mixed languages is evaluated using **SacreBLEU 
 
 On the measured 20-example Romanized Kannada benchmark, chrF improved by **15.99 points**, from **38.86** to **54.85** (approximately **41.1% relative improvement**). In the displayed qualitative sample, fine-tuning improved 9 of 10 sentence-level chrF scores and removed the base model's repeated explanatory preamble, although one example regressed; broader code-mixed and native-script evaluation remains pending. All reported scores in `results/metrics.csv` come directly from notebook execution.
 
+### Colab benchmark output
+
+```text
+Evaluating fine_tuned_model on 20 test examples...
+fine_tuned_model: 20/20 completed
+
+✓ fine_tuned_model Average chrF Score:
+chrf    54.85
+
+=============================================
+       COMPARATIVE BENCHMARK RESULTS
+=============================================
+      Plain Gemma (chrF)  Fine-tuned Gemma (chrF)  Gain (+chrF)
+chrf               38.86                    54.85         15.99
+=============================================
+```
+
+### Qualitative comparison sample
+
+| # | Input | Expected | Plain model | Fine-tuned model | Plain chrF | Tuned chrF |
+|---:|---|---|---|---|---:|---:|
+| 0 | Civil Services aspirants often discuss... | Civil Services aspirant-ru exam-ge prepare aag... | Here are a few options, depending on how casual... | Civil Services aspirants-galu exam preparation... | 42.81 | **54.13** |
+| 1 | The notification is about us in pursu... | Idu Ministry of Environment, Forest & Climate... | Here are a few options, depending on how casual... | Notification annu India Government-ge Ministry... | 48.24 | **61.55** |
+| 2 | ISL's role in popularizing football... | ISL du India dalli football annu popular madal... | Here are a few options, depending on how casual... | ISL-ge India nalli football popular madidide... | 30.23 | **49.36** |
+| 3 | Facebook campaigns for nutritious breakfast... | Facebook-u poshakaraaya oota-kke prayojana kor... | Here are a few options, depending on the exact... | Facebook campaigns nutritious breakfast ge | 20.80 | **23.11** |
+| 4 | The Indian Reserve Battalion, also known... | Bharata Reserve Battalion, 1st Battalion anta... | Here are a few options, depending on how casual... | Indian Reserve Battalion, 1st Battalion annu... | 46.11 | **54.32** |
+| 5 | Campervan trips offer adventure sports... | Campervan trip salli snorkeling, kayaking haag... | Here are a few options, depending on how casual... | Campervan trips-alli snorkeling mattu kayaking... | 50.15 | **82.42** |
+| 6 | 1,753 new trees will be planted within... | CCS mattu itara bhavanagalalli 1753 hodhu mara... | Here are a few options, depending on how super... | CCS mattu haa building-galalli 1,753 hosa kood... | **27.41** | 14.13 |
+| 7 | Public sector jobs in renewable energy... | Sarkari shakha dalli renewable energy videsha... | Here are a few options, depending on how casual... | Public sector jobs renewable energy nalli... | 35.89 | **45.20** |
+| 8 | The interactive science corner features... | Interactive science corner nalli DIY STEM kit... | Here are a few options, depending on how super... | Interactive science corner-alli DIY STEM kit... | 60.57 | **80.24** |
+| 9 | In 1976, a separate district and sessions... | 1976 nalli, Sikar dalli onda tegedu district... | Here are a few options, depending on how casual... | 1976 nalli, Sikar ge separate district mattu... | 37.03 | **64.39** |
+
+The bold score in each row marks the better result. Fine-tuning improved 9 of these 10 displayed examples; row 6 is retained to show the observed regression rather than hiding an unfavorable result.
+
 ---
 
 ## 📱 6. Interactive Gradio Interface
