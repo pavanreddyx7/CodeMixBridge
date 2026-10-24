@@ -129,14 +129,14 @@ Text generation in informal code-mixed languages is evaluated using **SacreBLEU 
 
 | Metric | Generic Gemma (Base) | Fine-Tuned Gemma (LoRA) | Net Change |
 |---|---|---|---|
-| **Romanized chrF (Kanglish)** | *Per-task result pending* | *Per-task result pending* | — |
+| **Romanized chrF (Kanglish, 20 examples)** | **38.86** | **54.85** | **+15.99** |
 | **Code-Mixed chrF (Native)** | *Per-task result pending* | *Per-task result pending* | — |
 | **Full Native chrF** | *Per-task result pending* | *Per-task result pending* | — |
-| **Overall chrF** | **38.86** | **54.85** | **+15.99** |
+| **Overall chrF (all three tasks)** | *Pending full benchmark* | *Pending full benchmark* | — |
 | **Empty Output Rate (%)** | 0.0% | 0.0% | 0.0% |
 | **Median Latency** | ~0.38s | ~0.39s | +0.01s |
 
-The measured overall chrF improved by **15.99 points**, from **38.86** to **54.85** (approximately **41.1% relative improvement**). All scores in `results/metrics.csv` are generated directly from notebook execution; per-task aggregate scores will be added after they are exported from the benchmark notebook.
+On the measured 20-example Romanized Kannada benchmark, chrF improved by **15.99 points**, from **38.86** to **54.85** (approximately **41.1% relative improvement**). In the displayed qualitative sample, fine-tuning improved 9 of 10 sentence-level chrF scores and removed the base model's repeated explanatory preamble, although one example regressed; broader code-mixed and native-script evaluation remains pending. All reported scores in `results/metrics.csv` come directly from notebook execution.
 
 ---
 
