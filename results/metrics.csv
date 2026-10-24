@@ -1,3 +1,3 @@
 Model,Romanized chrF,Code-mixed chrF,Native chrF,Overall chrF,Empty Rate (%),Truncation Rate (%),Median Latency (s),Status
-Generic Gemma (Base),Pending,Pending,Pending,38.86,Pending,Pending,Pending,Measured Colab Benchmark
-Fine-Tuned Gemma (LoRA),Pending,Pending,Pending,54.85,Pending,Pending,Pending,Measured Colab Benchmark
+Generic Gemma (Base),Pending,Pending,Pending,Pending,Pending,Pending,Pending,Awaiting Colab Run
+Fine-Tuned Gemma (LoRA),Pending,Pending,Pending,Pending,Pending,Pending,Pending,Awaiting Colab Run
