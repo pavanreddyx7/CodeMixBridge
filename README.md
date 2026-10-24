@@ -129,14 +129,14 @@ Text generation in informal code-mixed languages is evaluated using **SacreBLEU 
 
 | Metric | Generic Gemma (Base) | Fine-Tuned Gemma (LoRA) | Net Change |
 |---|---|---|---|
-| **Romanized chrF (Kanglish)** | *Awaiting Colab Run* | *Awaiting Colab Run* | **+Points** |
-| **Code-Mixed chrF (Native)** | *Awaiting Colab Run* | *Awaiting Colab Run* | **+Points** |
-| **Full Native chrF** | *Awaiting Colab Run* | *Awaiting Colab Run* | **+Points** |
-| **Overall chrF** | *Awaiting Colab Run* | *Awaiting Colab Run* | **+Points** |
+| **Romanized chrF (Kanglish)** | *Per-task result pending* | *Per-task result pending* | — |
+| **Code-Mixed chrF (Native)** | *Per-task result pending* | *Per-task result pending* | — |
+| **Full Native chrF** | *Per-task result pending* | *Per-task result pending* | — |
+| **Overall chrF** | **38.86** | **54.85** | **+15.99** |
 | **Empty Output Rate (%)** | 0.0% | 0.0% | 0.0% |
 | **Median Latency** | ~0.38s | ~0.39s | +0.01s |
 
-*All scores in `results/metrics.csv` are generated directly from notebook execution.*
+The measured overall chrF improved by **15.99 points**, from **38.86** to **54.85** (approximately **41.1% relative improvement**). All scores in `results/metrics.csv` are generated directly from notebook execution; per-task aggregate scores will be added after they are exported from the benchmark notebook.
 
 ---
 
