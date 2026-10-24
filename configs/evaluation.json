@@ -1,0 +1,31 @@
+{
+  "test_manifest_path": "artifacts/split_manifest.json",
+  "baseline_predictions_path": "results/baseline_predictions.jsonl",
+  "finetuned_predictions_path": "results/finetuned_predictions.jsonl",
+  "metrics_summary_path": "results/metrics.csv",
+  "human_review_path": "results/human_review.csv",
+  "error_analysis_path": "results/error_analysis.md",
+  "metrics": [
+    "corpus_chrf",
+    "sentence_chrf_mean",
+    "empty_output_rate",
+    "truncation_rate",
+    "median_latency_seconds"
+  ],
+  "tasks": [
+    "english_to_romanized",
+    "english_to_codemixed",
+    "english_to_native",
+    "romanized_to_english",
+    "codemixed_to_english"
+  ],
+  "human_review": {
+    "sample_size": 20,
+    "criteria": [
+      "meaning_preservation",
+      "naturalness",
+      "style_compliance"
+    ],
+    "scale": "1-5"
+  }
+}

@@ -1,0 +1,20 @@
+# Colab GPU dependencies for Unsloth, Gemma 4, and LoRA Fine-Tuning on T4
+sentencepiece
+protobuf
+datasets==4.3.0
+huggingface_hub>=0.34.0,<2.0
+hf_transfer
+unsloth_zoo>=2026.10.7
+bitsandbytes
+accelerate
+peft
+trl
+triton
+unsloth>=2026.10.7
+transformers
+tokenizers>=0.22.0,<=0.23.0
+timm
+gradio>=6.0.0,<7.0.0
+pandas
+sacrebleu
+tabulate

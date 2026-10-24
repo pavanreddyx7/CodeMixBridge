@@ -1,0 +1,27 @@
+{
+  "model": {
+    "base_model": "unsloth/gemma-4-E2B-it-unsloth-bnb-4bit",
+    "adapter_dir": "artifacts/adapters/gemma_4_kannada_lora",
+    "max_seq_length": 1024,
+    "load_in_4bit": true
+  },
+  "generation": {
+    "max_new_tokens": 128,
+    "do_sample": false,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "use_cache": true
+  },
+  "configurations": {
+    "generic": {
+      "name": "Generic Gemma",
+      "use_adapter": false,
+      "description": "Base Gemma 4 E2B instruction-tuned model without LoRA weights"
+    },
+    "finetuned": {
+      "name": "Fine-Tuned Gemma",
+      "use_adapter": true,
+      "description": "Gemma 4 E2B with Kannada LoRA adapter trained on IndicCMix"
+    }
+  }
+}
